@@ -6,12 +6,12 @@ import HomeScreen from './src/screens/HomeScreen';
 import ChatScreen from './src/screens/ChatScreen';
 
 const App = () => {
-  const Stack = createNativeStackNavigator()
+  const Stack = createNativeStackNavigator();
   return (
    <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name='HomeScreen' component={HomeScreen} />
-      <Stack.Screen name='ChatScreen' component={ChatScreen} />
+      <Stack.Screen name='HomeScreen' component={HomeScreen} />;
+      <Stack.Screen name='ChatScreen' component={ChatScreen} />;
 
     </Stack.Navigator>
    </NavigationContainer>
