@@ -1,8 +1,5 @@
-import { StyleSheet, Text, View,Image } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { HomeScreen} from '../../src/screens/';
 import FormButton from '../components/Button/FormButton';
 import FormInput from '../components/Input/FormInput';
 import Header from '../components/Header/Header';
