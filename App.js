@@ -42,6 +42,9 @@ const App = () => {
   );
 };
 
+const Stack = createNativeStackNavigator();
+  
+
 const styles = StyleSheet.create({
   tabBarIcon: {
     width:30,
