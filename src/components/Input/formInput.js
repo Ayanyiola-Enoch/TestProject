@@ -3,7 +3,7 @@ import React from 'react'
 
 const FormInput = ({title, placeholder}) => {
   return (
-    <View style={{marginTop: 20, }}>
+    <View style={{marginTop: 14, }}>
       <Text style={{fontSize:13, color:'black'}}>{title}</Text>
       <View style={styles.container}>
         <TextInput 

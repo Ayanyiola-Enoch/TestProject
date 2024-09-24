@@ -23,7 +23,7 @@ const App = () => {
       name='HomeScreen' 
       component={HomeScreen} 
       options={{
-        title: 'Job',
+        title: 'Home',
         tabBarIcon: ({ focused }) => (
           <Image source={require('./src/assets/icons/icons8-home-100.png')} style={styles.tabBarIcon} />
         ),
@@ -33,8 +33,8 @@ const App = () => {
       <Tab.Screen
        name='ChatScreen' 
        component={ChatScreen} 
-       options={{title:'Settings', tabBarIcon:({focused})=>(
-        <Image source={require('./src/assets/icons/icons8-settings-100.png')} style={styles.tabBarIcon} />
+       options={{title:'Profile', tabBarIcon:({focused})=>(
+        <Image source={require('./src/assets/icons/icons8-male-user-100.png')} style={styles.tabBarIcon} />
        ) }} />
 
     </Tab.Navigator>

@@ -6,9 +6,9 @@ import FormInput from '../components/Input/FormInput';
 const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <FormButton title={"Validate"} />
       <FormInput title={"Full Name"} placeholder={"enter your full name"} />
       <FormInput title={"Password"} placeholder={"enter your password"} />
+      <FormButton title={"Sign in"} />
 
     </View>
   );
