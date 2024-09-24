@@ -1,14 +1,30 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TextInput } from 'react-native'
 import React from 'react'
 
-const formInput = () => {
+const FormInput = ({title, placeholder}) => {
   return (
-    <View>
-      <Text>formInput</Text>
+    <View style={{marginTop: 20, }}>
+      <Text style={{fontSize:13, color:'black'}}>{title}</Text>
+      <View style={styles.container}>
+        <TextInput 
+        style={{fontSize: 13, color: "black"}}
+        placeholder={placeholder}
+        placeholderTextColor={'grey'}
+
+        />
+      </View>
     </View>
   )
 }
 
-export default formInput
-
-const styles = StyleSheet.create({})
+export default FormInput;
+const styles = StyleSheet.create({
+    container:{
+    borderWidth: 0.9,
+    borderColor: 'grey',
+    height: 45,
+    borderRadius: 5,
+    paddingHorizontal: 5,
+    marginTop: 7,
+    }
+});

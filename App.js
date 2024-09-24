@@ -13,7 +13,7 @@ const App = () => {
   return (
    <NavigationContainer>
     <Tab.Navigator 
-    initialRouteName='ChatScreen'
+    // initialRouteName='ChatScreen'
     screenOptions={{
       headerShown: false,
       tabBarShowLabel: false,
