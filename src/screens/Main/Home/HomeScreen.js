@@ -3,7 +3,8 @@ import React from 'react'
 import MiniButton from '../../../components/Button/MiniButton';
 import CartItem from '../../../components/Item/CartItem';
 
-const HomeScreen = () => {
+
+const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: "space-between" }}>
@@ -44,7 +45,7 @@ const HomeScreen = () => {
       </View>
 
       <View style={{flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
-        <CartItem title={'Men T-shirt'} price={'S233'} />
+        <CartItem title={'Men T-shirt'} price={'S233'} navigation={navigation} />
         <CartItem title={'Men T-shirt'} price={'S233'} />
       </View>
 

@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
 
-const CartItem = ({title, price}) => {
+const CartItem = ({title, price, navigation}) => {
     return (
         <View style={{paddingHorizontal:14, marginTop: 20, backgroundColor:'#c2c3c4', width:161, height:170, marginRight:10 }}>
             {/* <Image source={require('../../assets/icons/icons8-heart-100.png')} style={{width:30, height:33}}/> for the heart icon*/}
-            <View>
+            <TouchableOpacity onPress={()=>navigation.navigate("CartScreen")}>
                 <Image source={require('../../../src/assets/images/pexels-italo-melo-881954-2379004-removebg-preview.png')} style={styles.picture} />
-            </View>
+            </TouchableOpacity>
             <View style={{marginBottom:10, flexDirection: 'row', justifyContent:'space-between' }}>
                 <Text style={{fontWeight:'bold'}}>{title}</Text>
                 <Text style={{fontWeight:'bold', color: '#BB5D5C' }}>{price}</Text>

@@ -5,6 +5,7 @@ import HomeScreen from '../screens/Main/Home/HomeScreen';
 import CartScreen from '../screens/Main/Cart/CartScreen';
 import FavouriteScreen from '../screens/Main/Favourite/FavouriteScreen';
 import ProfileScreen from '../screens/Main/Profile/ProfileScreen';
+import CartDetails from '../screens/Main/Cart/CartDetails';
 
 const BottomTab = () => {
   const Tab = createBottomTabNavigator();
@@ -21,7 +22,7 @@ const BottomTab = () => {
         }} />
       <Tab.Screen
         name='Cart'
-        component={CartScreen}
+        component={CartDetails}
         options={{
           tabBarBadge: 4, tabBarIcon: ({ focused }) => (
             <Image source={require('../assets/icons/icons8-cart-100.png')} style={styles.tabIcon} />

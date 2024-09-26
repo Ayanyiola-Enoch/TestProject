@@ -4,7 +4,7 @@ import React from 'react';
 const MiniButton = ({ title }) => {
     return (
         <TouchableOpacity style={styles.SmallButton}>
-            <Text style={{ fontSize: 14, color: 'black' }}>{title}</Text>
+            <Text style={{ fontSize: 13, color: 'black' }}>{title}</Text>
         </TouchableOpacity>
     );
 };
