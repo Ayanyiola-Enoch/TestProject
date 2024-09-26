@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
-import FormButton from '../components/Button/FormButton';
-import FormInput from '../components/Input/FormInput';
-import Header from '../components/Header/Header';
+import FormButton from '../../components/Button/FormButton';
+import FormInput from '../../components/Input/FormInput';
+import Header from '../../components/Header/Header';
 
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({navigation}) => {
+
   return (
     <View style={styles.page}>
       <Header header={"Register"} />
@@ -25,16 +26,17 @@ const HomeScreen = ({ navigation }) => {
 
       <View style={{ marginTop: 27, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
         <View style={{ backgroundColor: '#D8D8D8', width: 60, height: 40, alignItems: 'center', justifyContent: 'center' }}>
-          <Image source={require('../assets/images/google.png')} style={{ width: 30, height: 30 }} />
+          <Image source={require('../../assets/images/google.png')} style={{ width: 30, height: 30 }} />
         </View>
         <View style={{ backgroundColor: '#D8D8D8', width: 60, height: 40, alignItems: 'center', justifyContent: 'center' }}>
-          <Image source={require('../assets/images/facebook.png')} style={{ width: 30, height: 30 }} />
+          <Image source={require('../../assets/images/facebook.png')} style={{ width: 30, height: 30 }} />
         </View>
       </View>
     </View>
-      <FormButton title={"Sign in"} />
-
-      <Text style={{color:'black', fontSize:12, textAlign:'center', marginTop:17, marginBottom:10}}>Doesn't Have an account? <Text style={{color:'#BB5D5C', fontWeight:'bold'}}>sign up</Text></Text>
+      <FormButton title={"Sign up"} />
+    <TouchableOpacity onPress={()=>navigation.navigate("Login")}>
+      <Text style={{color:'black', fontSize:12, textAlign:'center', marginTop:17, marginBottom:10}}>Doesn't Have an account? <Text style={{color:'#BB5D5C', fontWeight:'bold'}}>sign in</Text></Text>
+    </TouchableOpacity>
     </View>
   );
 };

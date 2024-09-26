@@ -1,16 +1,16 @@
 import { StyleSheet, Text, View, TextInput } from 'react-native'
 import React from 'react'
 
-const FormInput = ({title, placeholder}) => {
+const FormInput = ({title, placeholder, kkk}) => {
   return (
-    <View style={{marginTop: 14, }}>
-      <Text style={{fontSize:13, color:'black'}}>{title}</Text>
+    <View style={{marginTop: 22,}}>
+      <Text style={{fontSize:13, fontWeight:'600', color:'black'}}>{title}</Text>
       <View style={styles.container}>
         <TextInput 
-        style={{fontSize: 13, color: "black"}}
+        style={{paddingHorizontal:9, fontSize: 13, color: "black", backgroundColor:'#D8D8D8'}}
         placeholder={placeholder}
         placeholderTextColor={'grey'}
-
+        secureTextEntry={kkk}
         />
       </View>
     </View>
@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     borderColor: 'grey',
     height: 45,
     borderRadius: 5,
-    paddingHorizontal: 5,
     marginTop: 7,
     }
 });

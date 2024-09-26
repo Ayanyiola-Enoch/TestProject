@@ -1,54 +1,102 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './src/screens/HomeScreen';
-import ChatScreen from './src/screens/ChatScreen';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import AuthStack from './src/navigator/AuthStack';
+import AppStack from './src/navigator/AppStack';
 
 const App = () => {
+  const Stack = createNativeStackNavigator();
 
-  const Tab = createBottomTabNavigator()
   return (
-   <NavigationContainer>
-    <Tab.Navigator 
-    // initialRouteName='ChatScreen'
-    screenOptions={{
-      headerShown: false,
-      tabBarShowLabel: false,
-    }}
-    >
-      <Tab.Screen 
-      name='HomeScreen' 
-      component={HomeScreen} 
-      options={{
-        title: 'Home',
-        tabBarIcon: ({ focused }) => (
-          <Image source={require('./src/assets/icons/icons8-home-100.png')} style={styles.tabBarIcon} />
-        ),
-        
-      }}
-      />
-      <Tab.Screen
-       name='ChatScreen' 
-       component={ChatScreen} 
-       options={{title:'Profile', tabBarIcon:({focused})=>(
-        <Image source={require('./src/assets/icons/icons8-male-user-100.png')} style={styles.tabBarIcon} />
-       ) }} />
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown:false}}>
+        <Stack.Screen name='Auth' component={AuthStack} />
+        <Stack.Screen name='Main' component={AppStack} />
 
-    </Tab.Navigator>
-   </NavigationContainer>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
-const Stack = createNativeStackNavigator();
+export default App;
 
 const styles = StyleSheet.create({
-  tabBarIcon: {
-    width:30,
-    height: 25,
-  },
+
 });
 
-export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Learning of Navigation
+
+// import { Image, StyleSheet, Text, View } from 'react-native';
+// import React from 'react';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import HomeScreen from './src/screens/HomeScreen';
+// import ChatScreen from './src/screens/ChatScreen';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+
+// const App = () => {
+
+//   const Tab = createBottomTabNavigator()
+//   return (
+//    <NavigationContainer>
+//     <Tab.Navigator 
+//     // initialRouteName='ChatScreen'
+//     screenOptions={{
+//       headerShown: false,
+//       tabBarShowLabel: false,
+//     }}
+//     >
+//       <Tab.Screen 
+//       name='HomeScreen' 
+//       component={HomeScreen} 
+//       options={{
+//         title: 'Home',
+//         tabBarIcon: ({ focused }) => (
+//           <Image source={require('./src/assets/icons/icons8-home-100.png')} style={styles.tabBarIcon} />
+//         ),
+        
+//       }}
+//       />
+//       <Tab.Screen
+//        name='ChatScreen' 
+//        component={ChatScreen} 
+//        options={{title:'Profile', tabBarIcon:({focused})=>(
+//         <Image source={require('./src/assets/icons/icons8-male-user-100.png')} style={styles.tabBarIcon} />
+//        ) }} />
+
+//     </Tab.Navigator>
+//    </NavigationContainer>
+//   );
+// };
+
+// const Stack = createNativeStackNavigator();
+
+// const styles = StyleSheet.create({
+//   tabBarIcon: {
+//     width:30,
+//     height: 25,
+//   },
+// });
+
+// export default App;
