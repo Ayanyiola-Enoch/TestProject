@@ -17,7 +17,8 @@ const BottomTab = () => {
         options={{
           title: 'Home',
           tabBarIcon: ({ focused }) => (
-            <Image source={require('../assets/icons/icons8-home-100.png')} style= {styles.tabIcon}/>
+            <Image source={require('../assets/icons/icons8-home-100.png')} 
+            style= {{width: 27, height: 25, tintColor: focused ? "red" : "black"  }}/>
           )
         }} />
       <Tab.Screen
@@ -25,21 +26,24 @@ const BottomTab = () => {
         component={CartDetails}
         options={{
           tabBarBadge: 4, tabBarIcon: ({ focused }) => (
-            <Image source={require('../assets/icons/icons8-cart-100.png')} style={styles.tabIcon} />
+            <Image source={require('../assets/icons/icons8-cart-100.png')} 
+            style={{width: 27, height: 25, tintColor: focused ? "red" : "black" }} />
           )
         }} />
       <Tab.Screen 
       name='Favourite' 
       component={FavouriteScreen}
       options={{tabBarIcon: ({focused})=>(
-        <Image source={require('../assets/icons//icons8-heart-100.png')} style={styles.tabIcon} />
+        <Image source={require('../assets/icons//icons8-heart-100.png')} 
+        style={{width: 27, height: 25, tintColor: focused ? "red" : "black" }} />
        ) 
       }} />
       <Tab.Screen
       name='Profile' 
       component={ProfileScreen}
       options={{tabBarIcon:({focused})=>(
-        <Image source={require('../assets/icons/icons8-customer-100.png')} style={styles.tabIcon} />
+        <Image source={require('../assets/icons/icons8-customer-100.png')} 
+        style={{width: 27, height: 25, tintColor: focused ? "red" : "black" }} />
        )
       }} />
     </Tab.Navigator>

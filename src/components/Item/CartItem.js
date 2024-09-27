@@ -9,8 +9,8 @@ const CartItem = ({title, price, navigation}) => {
                 <Image source={require('../../../src/assets/images/pexels-italo-melo-881954-2379004-removebg-preview.png')} style={styles.picture} />
             </TouchableOpacity>
             <View style={{marginBottom:10, flexDirection: 'row', justifyContent:'space-between' }}>
-                <Text style={{fontWeight:'bold'}}>{title}</Text>
-                <Text style={{fontWeight:'bold', color: '#BB5D5C' }}>{price}</Text>
+                <Text style={{fontWeight:'bold',fontSize:13}}>{title}</Text>
+                <Text style={{fontSize:13 ,fontWeight:'bold', color: '#BB5D5C' }}>{price}</Text>
             </View>
             <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
                 <Image source={require('../../../src/assets/icons/icons8-star-100.png')} style={styles.icons} />
@@ -24,8 +24,8 @@ export default CartItem;
 
 const styles = StyleSheet.create({
     icons:{
-        width: 21, 
-        height: 22
+        width: 18, 
+        height: 20
     },
     picture:{
         width: 150, 
