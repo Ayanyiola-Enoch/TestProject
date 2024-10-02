@@ -34,35 +34,38 @@ const Payment = ({ navigation }) => {
         <Text style={{ fontSize: 14.4, fontWeight: "600", color: 'black' }}>Shopping Information</Text>
       </View>
 
+{/* Address selection FlatList */}
+
       <FlatList data={Address}
         renderItem={({ item }) => {
-        return (
+          return (
+            <View style={{ alignItems: 'center', justifyContent: 'center', width: 320, height: 70, borderWidth: 2, borderRadius: 7, marginBottom: 19, marginTop: 17, borderColor: 'black' }}>
 
-      <View style={{ alignItems: 'center', justifyContent: 'center', width: 320, height: 70, borderWidth: 2, borderRadius: 7, marginBottom: 19, marginTop: 17, borderColor: 'black' }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 9 }}>
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 9 }}>
-
-          <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center' }}>
-            <Image source={item.select} style={{ width: 35, height: 30 }} />
-            <Image source={item.tick} style={{ width: 16, height: 14, position: 'absolute' }} />
-          </TouchableOpacity>
-
-
-          <View style={{ flex: 1, marginLeft: 17, }}>
-            <Text style={{ color: 'black', fontSize: 13, fontWeight: '600' }}>{item.name}</Text>
-            <Text style={{ color: 'black', fontSize: 12 }}>{item.phone}</Text>
-            <Text style={{ color: 'black', fontSize: 12 }}>Oppositre the colony</Text>
-          </View>
-
-          <TouchableOpacity>
-            <Image source={require('../../../assets/icons/icons8-edit-100.png')} style={{ width: 22, height: 22 }} />
-          </TouchableOpacity>
-        </View>
+                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center' }}>
+                  <Image source={item.select} style={{ width: 35, height: 30 }} />
+                  {/* <Image source={item.tick} style={{ width: 16, height: 14, position: 'absolute' }} /> */}
+                </TouchableOpacity>
 
 
-      </View>
-  )
-}} />
+                <View style={{ flex: 1, marginLeft: 17, }}>
+                  <Text style={{ color: 'black', fontSize: 13, fontWeight: '600' }}>{item.name}</Text>
+                  <Text style={{ color: 'black', fontSize: 12 }}>{item.phone}</Text>
+                  <Text style={{ color: 'black', fontSize: 12 }}>Oppositre the colony</Text>
+                </View>
+
+                <TouchableOpacity>
+                  <Image source={require('../../../assets/icons/icons8-edit-100.png')} style={{ width: 22, height: 22 }} />
+                </TouchableOpacity>
+              </View>
+
+
+            </View>
+          )
+        }} />
+
+        {/* Payment  */}
 
       <View style={{ marginTop: 40 }}>
         <Text style={{ fontSize: 15.5, color: "black", fontWeight: 'bold' }}>Payment Method</Text>
@@ -79,6 +82,8 @@ const Payment = ({ navigation }) => {
           <Image source={require('../../../assets/icons/icons8-visa-100.png')} style={{ width: 26, height: 28 }} />
         </View>
       </View>
+
+      {/* Calculation of the order */}
 
       <View style={{ marginTop: 40 }}>
         <Text style={{ fontSize: 15.5, color: "black", fontWeight: 'bold' }}>Amount</Text>
