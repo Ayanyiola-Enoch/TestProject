@@ -57,13 +57,13 @@ const FavouriteScreen = () => {
                     <Image source={item.picture} style={{ width: 155, borderRadius: 10, height: 155, }} />
                   </View>
                   <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 8 }}>
-                    <Text style={{ fontSize: 12, fontWeight: 'bold' }}>{item.title}</Text>
-                    <Text style={{ fontSize: 12, fontWeight: 'bold' }}>{item.cost}</Text>
+                    <Text style={{ fontSize: 12, fontWeight: 'bold', color:'black' }}>{item.title}</Text>
+                    <Text style={{ fontSize: 12, fontWeight: 'bold', color:'black' }}>{item.cost}</Text>
                   </View>
-                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 8 }}>
-                    <Image source={item.image} style={{ width: 20, height: 20 }} />
-                    <View style={{ backgroundColor: '#BB5D5C', height: 26, width: 26, padding: 11, justifyContent: 'center', borderRadius: 21, alignItems: 'center' }}>
-                      <Image source={item.image2} style={{ width: 20, height: 20 }} />
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 7 }}>
+                    <Image source={item.image} style={{ width: 18, height: 18 }} />
+                    <View style={{ backgroundColor: '#BB5D5C', height: 24, width: 24, padding: 11, justifyContent: 'center', borderRadius: 21, alignItems: 'center' }}>
+                      <Image source={item.image2} style={{ width: 18, height: 18 }} />
                     </View>
                   </View>
                 </View>

@@ -125,33 +125,33 @@ const CartDetails = ({navigation}) => {
 
       {/* Calculation Bottom*/}
 
-      <View style={{ height: "40%", backgroundColor: '#C2C3C4', padding: 19 }}>
+      <View style={{ height: "40%", backgroundColor: '#C2C3C4', }}>
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 17 }}>
-          <Text>Sub Total</Text>
-          <Text style={{ color: "#BB5D5C" }}>$1000</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 17, marginTop:15, paddingHorizontal:17 }}>
+          <Text style={{fontSize:12, fontWeight:'700', color:'black'}}>Sub Total</Text>
+          <Text style={{fontSize:12, fontWeight:'700', color: "#BB5D5C" }}>$1000</Text>
         </View>
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 17 }}>
-          <Text>Sub Total</Text>
-          <Text style={{ color: "#BB5D5C" }}>$100</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 17, paddingHorizontal:17 }}>
+          <Text style={{fontSize:12, fontWeight:'600', color:'black'}}>Sub Total</Text>
+          <Text style={{fontSize:12, fontWeight:'700', color: "#BB5D5C" }}>$100</Text>
         </View>
 
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-          <Text>Sub Total</Text>
-          <Text style={{ color: "#BB5D5C" }}>$50</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20, paddingHorizontal:17 }}>
+          <Text style={{fontSize:12, fontWeight:'600', color:'black'}}>Sub Total</Text>
+          <Text style={{fontSize:12, fontWeight:'700', color: "#BB5D5C" }}>$50</Text>
         </View>
 
         {/*hORIZONTAL LINE */}
-        <View style={{ height: 1, backgroundColor: 'black', width: "100%", marginBottom: 30 }}></View>
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Text>Total</Text>
-          <Text style={{ color: "#BB5D5C" }}>$1050</Text>
+        <View style={{ height: 1, backgroundColor: 'black', marginBottom: 30 }}></View>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal:17 }}>
+          <Text style={{fontSize:12, fontWeight:'600', color:'black'}}>Total</Text>
+          <Text style={{fontSize:12, fontWeight:'700', color: "#BB5D5C" }}>$1050</Text>
         </View>
 
-        <TouchableOpacity onPress={()=>navigation.navigate("Payment")} style={{ marginTop: 20, }}>
-          <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold', fontSize: 18, backgroundColor: '#BB5D5C', padding: 10, borderRadius: 30 }}>Checkout</Text>
+        <TouchableOpacity onPress={()=>navigation.navigate("Payment")} style={{ marginTop: 27, paddingHorizontal:17, }}>
+          <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold', fontSize: 13, backgroundColor: '#BB5D5C', padding: 10, borderRadius: 30 }}>Checkout</Text>
         </TouchableOpacity>
 
 

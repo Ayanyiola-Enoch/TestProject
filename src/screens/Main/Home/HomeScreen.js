@@ -24,7 +24,7 @@ const shirts = [
     Save: require('../../../assets/icons/icons8-briefcase-100.png'),
   },
   {
-    id: 4, picture: require('../../../assets/images/33.jpg'),
+    id: 4, picture: require('../../../assets/images/pexels-italo-melo-881954-2379004-removebg-preview.png'),
     title: 'Men T-Shirt',
     cost1: '$233',
     StarIcon: require('../../../assets/icons/icons8-star-100.png'),
@@ -78,21 +78,21 @@ const HomeScreen = ({ navigation }) => {
             columnWrapperStyle={{ justifyContent: 'space-between' }}
             renderItem={({ item }) => {
               return (
-                <View style={{ marginTop: 10, }}>
+                <TouchableOpacity onPress={()=>navigation.navigate('CartScreen')} style={{ marginTop: 10, }}>
                   <Image source={item.picture} style={{ height: 172, width: 149, }} />
                   <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 8 }}>
-                    <Text style={{ fontSize: 13, fontWeight: '600', color: 'black' }}>{item.title}</Text>
-                    <Text style={{ fontSize: 13, fontWeight: '600', color: '#BB5D5C' }}>{item.cost1}</Text>
+                    <Text style={{ fontSize: 12, fontWeight: '600', color: 'black' }}>{item.title}</Text>
+                    <Text style={{ fontSize: 12, fontWeight: '600', color: '#BB5D5C' }}>{item.cost1}</Text>
                   </View>
                   <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 8 }}>
                     <TouchableOpacity>
-                      <Image source={item.StarIcon} style={{ height: 20, width: 21 }} />
+                      <Image source={item.StarIcon} style={{ height: 17, width: 18 }} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ backgroundColor: '#BB5D5C', width: 30, height: 27, alignItems: 'center', justifyContent: 'center', borderRadius: 20 }}>
-                      <Image source={item.Save} style={{ height: 20, width: 21 }} />
+                    <TouchableOpacity style={{ backgroundColor: '#BB5D5C', width: 27, height: 24, alignItems: 'center', justifyContent: 'center', borderRadius: 20 }}>
+                      <Image source={item.Save} style={{ height: 16, width: 18 }} />
                     </TouchableOpacity>
                   </View>
-                </View>
+                </TouchableOpacity>
               )
             }} />
         </View>
@@ -125,10 +125,14 @@ const HomeScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      <View style={{ marginTop: 19 }}>
-        <Image source={require('../../../assets/icons/icons8-search-100.png')} style={{ width: 20, height: 20, position: 'absolute', top: 9, left: 10 }} />
-        <TextInput placeholder='Search' style={{ width: 320, height: 40, borderWidth: 2, borderRadius: 10, paddingHorizontal: 30, }} />
-        <Image source={require('../../../assets/icons/icons8-microphone-100.png')} style={{ width: 20, height: 20, position: 'absolute', top: 9, right: 10 }} />
+      <View style={{ marginTop: 19, flexDirection:'row', alignItems:'center', paddingHorizontal:10, justifyContent:'center',  width: '100%', borderWidth:2, borderRadius:16 ,height: 40,}}>
+        <View style={{flex:1, flexDirection:'row', alignItems:'center', }}>
+          <Image source={require('../../../assets/icons/icons8-search-100.png')} style={{ width: 20, height: 20, }} />
+          <TextInput placeholder='Search' style={{marginLeft:10, fontSize:12}} />
+        </View>
+        <View>
+          <Image source={require('../../../assets/icons/icons8-microphone-100.png')} style={{ width: 20, height: 20, marginRight:10 }} />
+        </View>
       </View>
 
       <FlatList
@@ -179,5 +183,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 29,
     paddingTop: 10,
     marginBottom: 19,
-  }
+  },
 });

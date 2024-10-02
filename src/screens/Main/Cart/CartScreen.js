@@ -1,11 +1,10 @@
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react';
-import FormButton from '../../../components/Button/FormButton';
 
-const CartScreen = () => {
+const CartScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <ScrollView>
+    
 
         <View>
           <Image source={require('../../../assets//images/33.jpg')} style={{ width: '100%', opacity: 0.4, height: 370, borderBottomLeftRadius: 60, borderBottomRightRadius: 60 }} />
@@ -29,7 +28,7 @@ const CartScreen = () => {
               <Image source={require('../../../assets/icons/icons8-star-100.png')} style={{ width: 20, height: 16 }} />
               <Image source={require('../../../assets/icons/icons8-star-100.png')} style={{ width: 20, height: 16 }} />
             </View>
-            <Text style={{ color: 'grey' }}>2038 Reviews</Text>
+            <Text style={{ color: 'grey', fontSize:13 }}>2038 Reviews</Text>
           </View>
         </View>
 
@@ -70,10 +69,12 @@ const CartScreen = () => {
             <Text style={{ fontWeight: 'bold', color: '#BB5D5C' }}>S341</Text>
           </View>
 
+          <TouchableOpacity onPress={() => navigation.navigate("Payment")} style={{ marginTop: 20, }}>
+            <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold', fontSize: 13, backgroundColor: '#BB5D5C', padding: 10, borderRadius: 30 }}>Payment</Text>
+          </TouchableOpacity>
 
-          <FormButton title={'Shop Now'} />
         </View>
-      </ScrollView>
+
     </View>
   )
 }
