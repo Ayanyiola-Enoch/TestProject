@@ -25,9 +25,9 @@ const BottomTab = () => {
         name='Cart'
         component={CartDetails}
         options={{
-          tabBarBadge: 4, tabBarIcon: ({ focused }) => (
+          tabBarBadge: 6, tabBarIcon: ({ focused }) => (
             <Image source={require('../assets/icons/icons8-cart-100.png')} 
-            style={{width: 27, height: 25, tintColor: focused ? "red" : "black" }} />
+            style={{width: 25, height: 24, tintColor: focused ? "red" : "black" }} />
           )
         }} />
       <Tab.Screen 

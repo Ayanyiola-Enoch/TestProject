@@ -9,7 +9,7 @@ const HeaderMain = ({ title }) => {
         <View style={{ marginTop: 15, flexDirection: 'row', alignItems: 'center', marginBottom: 20 }}>
             <View style={{ width: 49, height: 46, justifyContent: 'center', alignItems: 'center' }}>
                 <TouchableOpacity>
-                    <Image source={require('../../assets/icons/icons8-back-24.png')} style={{ width: 25, height: 25 }} />
+                    <Image source={require('../../assets/icons/icons8-back-24.png')} style={{ width: 29, height: 29 }} />
                 </TouchableOpacity>
             </View>
             <Text style={{ marginLeft: 70, fontSize: 17, fontWeight: 'bold', color: 'black' }}>{title}</Text>
