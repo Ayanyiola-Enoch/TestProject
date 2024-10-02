@@ -3,7 +3,7 @@ import React from 'react';
 import HeaderMain from '../../../components/Header/HeaderMain';
 
 
-const CartDetails = () => {
+const CartDetails = ({navigation}) => {
   const cartitem = [
     {
       id: 1,
@@ -144,13 +144,13 @@ const CartDetails = () => {
         </View>
 
         {/*hORIZONTAL LINE */}
-        <View style={{ height: 1, backgroundColor: 'black', width: "100%", marginBottom: 40 }}></View>
+        <View style={{ height: 1, backgroundColor: 'black', width: "100%", marginBottom: 30 }}></View>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
           <Text>Total</Text>
           <Text style={{ color: "#BB5D5C" }}>$1050</Text>
         </View>
 
-        <TouchableOpacity style={{ marginTop: 20, }}>
+        <TouchableOpacity onPress={()=>navigation.navigate("Payment")} style={{ marginTop: 20, }}>
           <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold', fontSize: 18, backgroundColor: '#BB5D5C', padding: 10, borderRadius: 30 }}>Checkout</Text>
         </TouchableOpacity>
 

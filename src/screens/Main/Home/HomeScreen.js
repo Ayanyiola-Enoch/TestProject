@@ -1,50 +1,111 @@
-import { Image, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
+import { Image, StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
 import MiniButton from '../../../components/Button/MiniButton';
 import CartItem from '../../../components/Item/CartItem';
 
+const shirts = [
+  {
+    id: 1, picture: require('../../../assets/images/33.jpg'),
+    title: 'Men T-Shirt',
+    cost1: '$233',
+    StarIcon: require('../../../assets/icons/icons8-star-100.png'),
+    Save: require('../../../assets/icons/icons8-briefcase-48.png'),
+  },
+  {
+    id: 2, picture: require('../../../assets/images/22.png'),
+    title: 'Men T-Shirt',
+    cost1: '$233',
+    StarIcon: require('../../../assets/icons/icons8-star-100.png'),
+    Save: require('../../../assets/icons/icons8-briefcase-48.png'),
+  },
+  {
+    id: 3, picture: require('../../../assets/images/33.jpg'),
+    title: 'Men T-Shirt',
+    cost1: '$233',
+    StarIcon: require('../../../assets/icons/icons8-star-100.png'),
+    Save: require('../../../assets/icons/icons8-briefcase-48.png'),
+  },
+  {
+    id: 4, picture: require('../../../assets/images/33.jpg'),
+    title: 'Men T-Shirt',
+    cost1: '$233',
+    StarIcon: require('../../../assets/icons/icons8-star-100.png'),
+    Save: require('../../../assets/icons/icons8-briefcase-48.png'),
+  },
 
-const HomeScreen = ({navigation}) => {
+]
+
+const HomeScreen = ({ navigation }) => {
+
+  const RenderHeader = () => {
+    return (
+      <View>
+
+        <View style={styles.card}>
+
+          <View style={{ flexDirection: 'row' }}>
+            <View>
+              <Text style={{ color: "white", width: 100, lineHeight: 28, marginBottom: 10, fontWeight: 'bold' }}>Shop with us! Get 50% off on items</Text>
+              <TouchableOpacity style={{ width: 90, height: 39, backgroundColor: '#C2C3C4', alignItems: 'center', justifyContent: 'center', borderRadius: 8, marginBottom: 10 }}><Text style={{ color: 'black', fontSize: 12 }}> Shop Now</Text></TouchableOpacity>
+            </View>
+
+            <View>
+              <Image source={require('../../../assets/images/pexels-shiru-gamage-226946-1308578-removebg-preview.png')} style={{ width: 180, height: 150 }} />
+            </View>
+
+          </View>
+
+        </View>
+
+        <View style={{ marginTop: 10 }}>
+
+          <FlatList data={['All', "Men's", 'Women', 'Children']}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            renderItem={({ item }) => {
+              return (
+                <TouchableOpacity style={{ marginLeft: 15, marginBottom: 15 }}>
+                  <View style={{ backgroundColor: '#D8D8D8', width: 68, borderRadius: 30, height: 36, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 12, color: 'black' }}>{item}</Text>
+                  </View>
+                </TouchableOpacity>
+              )
+            }} />
+        </View>
+
+        <View>
+
+          <FlatList />
+        </View>
+      </View>
+
+    )
+  }
+
+
+
+
+
+
+
+
+
+
+
   return (
     <View style={styles.page}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: "space-between" }}>
-        <View>
-          <Text style={{ fontSize: 17, color: "#BB5D5C", fontWeight: "bold" }}>Welcome back!</Text>
-          <Text style={{ textAlign: 'center' }}>Ayanyiola Enoch</Text>
-        </View>
-        <View>
-          <Image source={require("../../../assets/icons/icons8-notification-100.png")} style={styles.notificationIcon} />
-        </View>
+
+      <View>
+
       </View>
 
-      <View style={{ position: 'relative', width: '100%' }}>
-        <Image source={require("../../../assets/icons/icons8-search-100.png")} style={styles.searchIcon} />
-        <TextInput placeholder='Search' style={styles.input} />
-        <Image source={require('../../../assets/icons/icons8-microphone-100.png')} style={styles.recordIcon} />
-      </View>
+      <FlatList
+        data={['']}
+        ListHeaderComponent={RenderHeader} />
 
-      <View style={styles.card}>
-        <View style={{ flexDirection: 'row' }}>
-          <View>
-            <Text style={{ color: "white", width: 100, lineHeight: 28, marginBottom: 10, fontWeight: 'bold' }}>Shop with us! Get 50% off on items</Text>
-            <TouchableOpacity style={{ width: 90, height: 39, backgroundColor: '#C2C3C4', alignItems: 'center', justifyContent: 'center', borderRadius: 8, marginBottom: 10 }}><Text style={{ color: 'black', fontSize: 12 }}> Shop Now</Text></TouchableOpacity>
-          </View>
 
-          <View>
-            <Image source={require('../../../assets/images/pexels-shiru-gamage-226946-1308578-removebg-preview.png')} style={{ width: 180, height: 150 }} />
-          </View>
 
-        </View>
-      </View>
-
-      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <MiniButton title={'All'} />
-        <MiniButton title={'Men'} />
-        <MiniButton title={'Women'} />
-        <MiniButton title={'children'} />
-      </View>
-
-      <View style={{flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         <CartItem title={'Men T-shirt'} price={'S233'} navigation={navigation} />
         <CartItem title={'Men T-shirt'} price={'S233'} />
       </View>
