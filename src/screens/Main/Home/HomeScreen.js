@@ -120,7 +120,7 @@ const HomeScreen = ({ navigation }) => {
           <Text style={{ fontWeight: '600', fontSize: 12, color: 'black', textAlign: 'center' }}>Ayanyiola Enoch</Text>
 
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={({})=>navigation.navigate('Notification')}>
           <Image source={require('../../../assets/icons/icons8-notification-100.png')} style={{ width: 20, height: 20 }} />
         </TouchableOpacity>
       </View>
