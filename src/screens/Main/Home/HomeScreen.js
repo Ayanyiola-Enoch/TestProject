@@ -78,7 +78,7 @@ const HomeScreen = ({ navigation }) => {
             columnWrapperStyle={{ justifyContent: 'space-between' }}
             renderItem={({ item }) => {
               return (
-                <TouchableOpacity onPress={()=>navigation.navigate('CartScreen')} style={{ marginTop: 10, }}>
+                <TouchableOpacity onPress={() => navigation.navigate('CartScreen')} style={{ marginTop: 10, }}>
                   <Image source={item.picture} style={{ height: 172, width: 149, }} />
                   <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 8 }}>
                     <Text style={{ fontSize: 12, fontWeight: '600', color: 'black' }}>{item.title}</Text>
@@ -99,10 +99,7 @@ const HomeScreen = ({ navigation }) => {
       </View>
 
     )
-  }
-
-
-
+  };
 
 
 
@@ -120,18 +117,18 @@ const HomeScreen = ({ navigation }) => {
           <Text style={{ fontWeight: '600', fontSize: 12, color: 'black', textAlign: 'center' }}>Ayanyiola Enoch</Text>
 
         </View>
-        <TouchableOpacity onPress={({})=>navigation.navigate('Notification')}>
+        <TouchableOpacity onPress={({ }) => navigation.navigate('Notification')}>
           <Image source={require('../../../assets/icons/icons8-notification-100.png')} style={{ width: 20, height: 20 }} />
         </TouchableOpacity>
       </View>
 
-      <View style={{ marginTop: 19, flexDirection:'row', alignItems:'center', paddingHorizontal:10, justifyContent:'center',  width: '100%', borderWidth:2, borderRadius:16 ,height: 40,}}>
-        <View style={{flex:1, flexDirection:'row', alignItems:'center', }}>
+      <View style={{ marginTop: 19, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, justifyContent: 'center', width: '100%', borderWidth: 2, borderRadius: 16, height: 40, }}>
+        <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', }}>
           <Image source={require('../../../assets/icons/icons8-search-100.png')} style={{ width: 20, height: 20, }} />
-          <TextInput placeholder='Search' style={{marginLeft:10, fontSize:12}} />
+          <TextInput placeholder='Search' style={{ marginLeft: 10, fontSize: 12 }} />
         </View>
         <View>
-          <Image source={require('../../../assets/icons/icons8-microphone-100.png')} style={{ width: 20, height: 20, marginRight:10 }} />
+          <Image source={require('../../../assets/icons/icons8-microphone-100.png')} style={{ width: 20, height: 20, marginRight: 10 }} />
         </View>
       </View>
 
