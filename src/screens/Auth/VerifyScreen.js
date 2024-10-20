@@ -9,19 +9,19 @@ const VerifyScreen = () => {
     <View style={styles.page}>
       <Header header={"OTP Code Verification"} />
 
-      <FormInput title={"Code has been sent to +23480*******99"}  />
+      <FormInput title={"Code has been sent to +23480*******99"} />
 
-      <View style={{justifyContent:'center', alignItems:'center', marginTop:70}}>
-        <Text style={{marginBottom:30}}>Resend Code in <Text style={{color:'#BB5D5C'}}>55</Text> s</Text>
+      <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 70 }}>
+        <Text style={{ marginBottom: 30 }}>Resend Code in <Text style={{ color: '#BB5D5C' }}>55</Text> s</Text>
       </View>
 
-      <FormButton title={"Verify"}/>
+      <FormButton title={"Verify"} />
 
     </View>
-  )
-}
+  );
+};
 
-export default VerifyScreen
+export default VerifyScreen;
 
 const styles = StyleSheet.create({
   page: {

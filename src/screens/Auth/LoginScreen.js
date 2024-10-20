@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react'
 import FormButton from '../../components/Button/FormButton';
 import FormInput from '../../components/Input/FormInput';
@@ -15,14 +15,14 @@ const ChatScreen = ({ navigation }) => {
 
       </View>
 
-    <TouchableOpacity onPress={()=>navigation.navigate("Verify")}>
-      <FormButton 
-      title={"Sign in"} 
-      onPress={()=>navigation.navigate("Main",{screen: "Bottom"})}
-      />
-    </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Verify")}>
+        <FormButton
+          title={"Sign in"}
+          onPress={() => navigation.navigate("Main", { screen: "Bottom" })}
+        />
+      </TouchableOpacity>
 
-      <TouchableOpacity style={{marginBottom:90}} onPress={()=>navigation.navigate("Register")}>
+      <TouchableOpacity style={{ marginBottom: 90 }} onPress={() => navigation.navigate("Register")}>
         <Text style={{ marginTop: 20, color: "black", textAlign: 'center' }}>If you don't have an account, <Text style={{ fontWeight: "bold", color: "#BB5D5C" }}>sign up</Text></Text>
       </TouchableOpacity>
       {/* <Text style={{color:'black', fontSize:12, textAlign:'center', marginTop:17, marginBottom:10}}>Doesn't Have an account? <Text style={{color:'#BB5D5C', fontWeight:'bold'}}>sign up</Text></Text> */}
