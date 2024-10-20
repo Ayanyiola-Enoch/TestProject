@@ -41,7 +41,6 @@
   "engines": {
     "node": ">=18"
   },
-  
   "overrides": {
     "rimraf": "^4.0.0",
     "glob": "9.0.0",
